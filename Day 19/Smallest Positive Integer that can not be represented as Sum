@@ -1,0 +1,13 @@
+# Smallest Positive Integer that can not be represented as Sum
+
+n = int(input())
+arr = list(map(int,input().split()))
+
+arr.sort()
+r = 1
+for i in range (0,n): 
+    if arr[i] <= r: 
+        r = r + arr[i] 
+    else: 
+        break
+print(r)
